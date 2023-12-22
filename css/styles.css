@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.rowDivs{
+    background-color: rgb(214, 214, 221);
+    display:flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 5px;
+    padding: 5px;
+}
+#btn{
+    display:flex;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    width: 100px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px gray;
+    align-items: center;
+}

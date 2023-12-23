@@ -3,23 +3,31 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-.rowDivs{
-    background-color: rgb(214, 214, 221);
-    display:flex;
+body{
+    display: flex;
     justify-content: center;
-    gap: 8px;
-    margin: 0 5px;
-    padding: 5px;
 }
 #btn{
-    display:flex;
-    height: 50vh;
     align-items: center;
+    width: 200px;
+    margin: 10px;
     justify-content: center;
 }
+.container{
+    width: 500px;
+    height: 500px;
+    margin: 5px auto;
+}
+.rowDivs{
+    border: 1px solid black;
+    display:flex;
+    justify-content: center;  
+}
+.colDivs{
+    border-right: 1px solid black;
+}
 .btn{
-    width: 100px;
+    margin: 5px;
     padding: 5px;
     font-size: 20px;
     border-radius: 5px;

@@ -50,3 +50,10 @@ body{
     box-shadow: 4px 4px 2px gray;
     align-items: center;
 }
+@media only screen and (max-width: 600px){
+    .container{
+        width: 90vw;
+        height: 840px;
+        margin: 0 auto;
+    }   
+}

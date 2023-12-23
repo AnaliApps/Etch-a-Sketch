@@ -29,9 +29,9 @@ function createDivs(n){
                 cell.style.backgroundColor = `rgb(${red},${green},${blue})`;
             });
             cell.addEventListener("mouseout",()=>{
-                cell.style.backgroundColor = "blue";
+                cell.style.backgroundColor = "black";
             });
-            cell.addEventListener("click",draw(cell));
+            // cell.addEventListener("click",draw(cell));
             console.log(`creating div ${i}`);
             console.log(`${j}`);
             row.appendChild(cell);
@@ -57,10 +57,10 @@ function refreshPage(){
     window.location.reload();
 }
 
-function draw(t){
-    t.style.backgroundColor = "purple";
-    console.log("clicked")
-}
+// function draw(t){
+//     t.style.backgroundColor = "purple";
+//     console.log("clicked")
+// }
 btnDv.appendChild(btn);
 btnDv.appendChild(btnrefreshPage)
 body.appendChild(btnDv);

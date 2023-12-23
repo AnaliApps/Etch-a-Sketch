@@ -19,6 +19,8 @@ function createDivs(n){
     for(let i=0;i<n;i++){
         let row = document.createElement("div");
         row.className = "rowDivs";
+        // row.style.height = `${h}px`;
+        // row.style.width = `${w}px`;
         for(let j=0;j<n;j++){
             let cell = document.createElement("div");
             cell.className = "colDivs";

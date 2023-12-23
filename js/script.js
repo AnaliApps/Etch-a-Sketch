@@ -19,8 +19,6 @@ function createDivs(n){
     for(let i=0;i<n;i++){
         let row = document.createElement("div");
         row.className = "rowDivs";
-        // row.style.height = `${h}px`;
-        // row.style.width = `${w}px`;
         for(let j=0;j<n;j++){
             let cell = document.createElement("div");
             cell.className = "colDivs";
@@ -33,6 +31,7 @@ function createDivs(n){
             cell.addEventListener("mouseout",()=>{
                 cell.style.backgroundColor = "blue";
             });
+            cell.addEventListener("click",draw(cell));
             console.log(`creating div ${i}`);
             console.log(`${j}`);
             row.appendChild(cell);
@@ -56,6 +55,11 @@ function run(){
 
 function refreshPage(){
     window.location.reload();
+}
+
+function draw(t){
+    t.style.backgroundColor = "purple";
+    console.log("clicked")
 }
 btnDv.appendChild(btn);
 btnDv.appendChild(btnrefreshPage)

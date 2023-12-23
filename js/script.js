@@ -1,20 +1,22 @@
 let btn = document.createElement("button");
-btn.setAttribute("class","btn")
-btn.textContent = "SetGrid"
-let btnrefreshPage = document.createElement("button");
-btnrefreshPage.setAttribute("class","btn");
-btnrefreshPage.textContent = "RefreshPage";
+btn.setAttribute("class","btn");
+btn.textContent = "SetGrid";
+let btnClearPage = document.createElement("button");
+btnClearPage.setAttribute("class","btn");
+btnClearPage.textContent = "Clear";
 let btnDv = document.createElement("div")
 btnDv.setAttribute("id","btn")
 let body = document.querySelector("body");
 let container = document.createElement("div");
+// container.style.height = "auto";
+console.log(window.innerHeight)
 container.setAttribute("class","container")
 let red = Math.floor(Math.random()* 255);
 let green = Math.floor(Math.random()* 255);
 let blue = Math.floor(Math.random()* 255);
 function createDivs(n){
-    let h = 500/n;
-    let w = 500/n;
+    let h = 635/n;
+    let w = 960/n;
     console.log(n)
     for(let i=0;i<n;i++){
         let row = document.createElement("div");
@@ -43,7 +45,6 @@ function createDivs(n){
 }
 
 function run(){
-    container.innerHTML = "";
     let num = parseInt(prompt("Enter grid number you want: "));
     if(num > 100){
         num = parseInt(prompt("Enter grid number you want: "));
@@ -53,16 +54,12 @@ function run(){
     
 }
 
-function refreshPage(){
-    window.location.reload();
+function clear(){
+    container.innerHTML = "";
 }
 
-// function draw(t){
-//     t.style.backgroundColor = "purple";
-//     console.log("clicked")
-// }
 btnDv.appendChild(btn);
-btnDv.appendChild(btnrefreshPage)
+btnDv.appendChild(btnClearPage)
 body.appendChild(btnDv);
 btn.addEventListener("click",run);
-btnrefreshPage.addEventListener("click",refreshPage);
+btnClearPage.addEventListener("click",clear);

@@ -46,9 +46,8 @@ function createDivs(n){
 
 function run(){
     let num = parseInt(prompt("Enter grid number you want: "));
-    if(num > 100){
+    while(num > 100){
         num = parseInt(prompt("Enter grid number you want: "));
-        return
     }
     createDivs(num);
     

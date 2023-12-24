@@ -6,6 +6,9 @@ btnClearPage.setAttribute("class","btn");
 btnClearPage.textContent = "Clear";
 let btnDv = document.createElement("div")
 btnDv.setAttribute("id","btn")
+let btnRefresh = document.createElement("button");
+btnRefresh.setAttribute("class","btn");
+btnRefresh.textContent = "Refresh";
 let body = document.querySelector("body");
 let container = document.createElement("div");
 // container.style.height = "auto";
@@ -56,9 +59,14 @@ function run(){
 function clear(){
     container.innerHTML = "";
 }
+function refresh(){
+    window.location.reload();
+}
 
 btnDv.appendChild(btn);
 btnDv.appendChild(btnClearPage)
+btnDv.appendChild(btnRefresh);
 body.appendChild(btnDv);
 btn.addEventListener("click",run);
 btnClearPage.addEventListener("click",clear);
+btnRefresh.addEventListener("click",refresh)
